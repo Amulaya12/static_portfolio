@@ -2,7 +2,6 @@ from django.db import models
 import datetime
 
 
-# Creamos la clase post de publicacion:
 class Post(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
