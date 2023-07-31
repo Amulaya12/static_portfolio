@@ -1,59 +1,87 @@
 {% extends 'layout.html' %} {% block content %} {% load static %}
 
 <header class="row bg-black">
-  <div class="col-md-4">
-    <img
-      src="{% static 'portfolio/my_pic.jpeg' %}"
-      alt=""
-      class="img-fluid rounded"
-    />
-  </div>
+    <div class="col-md-4">
+        <img
+                src="{% static 'portfolio/my_pic.jpeg' %}"
+                alt=""
+                class="img-fluid rounded"
+        />
+    </div>
 
-  <div class="col-md-8 my-auto">
-    <h1 class="display-5"><strong>Amulaya Uppal</strong></h1>
-    <h4>Python Developer</h4>
-    <p>
-      Innovative Rising Star Backend Engineer at Global Analytics with 2+ years of
-      experience and a proven track record of evaluating problem and applying knowledge
-      in a beneficial way to improve the existing code quality and creating new features.
-      Learning new methodology and applying it is my key role in any organization.
-    </p>
-    <a
-      href="{% static 'portfolio/Amulaya_uppal_resume.pdf' %}"
-      class="btn btn-danger btn-lg rounded-0 my-3"
-      >Download CV</a
-    >
-  </div>
+    <div class="col-md-8 my-auto">
+        <h1 class="display-5"><strong>Amulaya Uppal</strong></h1>
+        <h4>Python Developer</h4>
+        <p>
+            Innovative Rising Star Backend Engineer at Global Analytics with 2+ years of
+            experience and a proven track record of evaluating problem and applying knowledge
+            in a beneficial way to improve the existing code quality and creating new features.
+            Learning new methodology and applying it is my key role in any organization.
+        </p>
+        <a
+                href="{% static 'portfolio/Amulaya_uppal_resume.pdf' %}"
+                class="btn btn-danger btn-lg rounded-0 my-3"
+        >Download CV</a
+        >
+    </div>
 </header>
 
 <div class="row my-4 text-center">
-  <h3>My Proyects</h3>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, fuga.</p>
-  <!-- por proyect en la lista de proyecto (iteramos la lista) -->
-  {% for proyect in proyects %}
+    <h2> My Journey </h2>
 
-  <div class="col-md-4 p-4">
-    <div class="card bg-black card-project">
-      <img
-        src="{{proyect.image.url}}"
-        alt="{{proyect.titulo}}"
-        class="card-img-top"
-      />
-      <div class="card-body">
-        <h2>{{proyect.titulo}}</h2>
-        <p>{{proyect.descripcion}}</p>
+    <h3>Software Engineer Intern, Gain Credit (Jan 2021 - May 2021)</h3>
+    <h4> Defects Management and Fixtures </h4>
+    <p>
+        This Role acts as the foundation for me. I started with this role with solving existing issue in the system by
+        making a effective solution for them. I have solved 180+ bugs in these 4 months helping me gaining the knowledge
+        of different fields with zero recurrence rate. During this I worked on various loan business modules like
+        waterfall, arrangement, breathing space, OperationsUI, ConsumerUI, transactions, etc.</p>
 
-        {% if proyect.url %}
-        <a
-          href="{{proyect.url}}"
-          class="btn btn-light rounded-0 btn-sm"
-          target="_blank"
-          >{{proyect.url}}</a
-        >
-        {% endif %}
-      </div>
+    <h3>Software Engineer I, Gain Credit (Jun 2021 - Aug 2022)</h3>
+    <h4> Development and Testing </h4>
+    <p>As a part of development and testing team, I have developed a script which consolidate all the results from every
+        CI run and put them in an excel sheet for the higher authority review.
+
+        Worked on Introducing the concept of micro services into the system by breaking down a module into several
+        independent services each with its own code base and databases connectivity. This helps me to gain experience on
+        decoupling the modules to act as its own independent service
+
+        Along with this I worked on python migration where migration of python from version 2 to version 3 took place
+        for various modules which has involved the testing of complete flow post migration and then monitoring it post
+        live. As part of this total 14 modules are being migrated.
+
+        Developed multiple REST APIs namely GET,PUT and POST api's which were needed to meet the different use case
+        scenarios like getting transactions details and applying it to update the latest data in table by fetching
+        details from third party for each transaction.
+
+        Able to implement the SDLC principles namely planning the requirements,designing and prototyping,coding of
+        software modules, testing the causer's and writing automated test suits and finally deploying the feature into
+        production.</p>
+
+    {% for proyect in proyects %}
+
+    <div class="col-md-4 p-4">
+        <div class="card bg-black card-project">
+            <img
+                    src="{{proyect.image.url}}"
+                    alt="{{proyect.titulo}}"
+                    class="card-img-top"
+            />
+            <div class="card-body">
+                <h2>{{proyect.titulo}}</h2>
+                <p>{{proyect.descripcion}}</p>
+
+                {% if proyect.url %}
+                <a
+                        href="{{proyect.url}}"
+                        class="btn btn-light rounded-0 btn-sm"
+                        target="_blank"
+                >{{proyect.url}}</a
+                >
+                {% endif %}
+            </div>
+        </div>
     </div>
-  </div>
 
-  {% endfor %} {% endblock %}
+    {% endfor %} {% endblock %}
 </div>
