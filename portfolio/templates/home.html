@@ -52,35 +52,23 @@
         </li>
 
 
-        <h2> EDUCATION </h2>
-            <p> B.Tech In Electronics and Communication, Thiagarajar College of Engineering </p>
-            <p> CGPA : 9.35/10 </p>
+        <h2> Education </h2>
+        <p> B.Tech In Electronics and Communication, Thiagarajar College of Engineering </p>
+        <p> CGPA : 9.35/10 </p>
+        <h2> Achievements </h2>
+        <li>
+            STAR PERFORMAR AT GAIN CREDIT
+            <p>
+                2 times Star performer Awardee for achieving the project goals on time and maintaining the company
+                goals.
+            </p>
+        </li>
+        <li>
+            SPIRIT IN VALUE AWARDEE
+            <p>
+                Recognized 8 times for outshining the company values in my work during my tenure.
+            </p>
+        </li>
     </ul>
 
-    {% for proyect in proyects %}
-
-    <div class="col-md-4 p-4">
-        <div class="card bg-black card-project">
-            <img
-                    src="{{proyect.image.url}}"
-                    alt="{{proyect.titulo}}"
-                    class="card-img-top"
-            />
-            <div class="card-body">
-                <h2>{{proyect.titulo}}</h2>
-                <p>{{proyect.descripcion}}</p>
-
-                {% if proyect.url %}
-                <a
-                        href="{{proyect.url}}"
-                        class="btn btn-light rounded-0 btn-sm"
-                        target="_blank"
-                >{{proyect.url}}</a
-                >
-                {% endif %}
-            </div>
-        </div>
-    </div>
-
-    {% endfor %} {% endblock %}
 </div>
